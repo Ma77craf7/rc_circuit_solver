@@ -1,6 +1,6 @@
 #Stracuzzi Matteo
 #Free RC circuit solver
-import math,os
+import math, os
 
 def volt(t, tension, tao, state):
     if state == 1:
