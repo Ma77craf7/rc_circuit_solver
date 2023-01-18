@@ -1,7 +1,7 @@
-#Stracuzzi Matteo
 #Free RC circuit solver
-import math, os
-
+import math
+import os
+################################# Functions #################################
 def volt(t, tension, tao, state):
     if state == 1:
         voltage = tension*(1- math.pow(math.e,(-t/tao)))
@@ -37,9 +37,9 @@ def t_from_Qc(Qc, q_max, tao, state):
     elif state == 2:
         t = -tao*math.log(Qc/q_max)
     return t
-
-
+#############################################################################
 print("Welcome")
+x=input("\npress enter to continue")
 os.system('cls' if os.name == 'nt' else 'clear')
 
 print("Insert some dates")
@@ -101,4 +101,4 @@ elif operation == 4:
         while Qc < 0:
             Qc = eval(input("Insert Qc [C] (use 'e' to use the scientific notation es: 1e10=100):\n"))
     print("The result is:\n", t_from_Qc(Qc, q_max, tao, state),"C")
-t=input("\n\n ### press enter to exit ###")
+x=input("\n\n### press enter to exit ###")
